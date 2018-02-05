@@ -1,0 +1,15 @@
+<h3 class="center-title">Presenting our awesome team:</h3>
+
+<ul class="list-inline text-center">
+  <% data.users.each do |gh_username| %>
+    <li>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username.github_nickname}", class: "avatar" %>
+      <h4><%= gh_username.name %></h4>
+      <p>
+        <% link_to "https://github.com/#{gh_username.github_nickname}", target: "_blank" do %>
+          <i class="fa fa-github"></i> <%= gh_username.github_nickname %>
+        <% end %>
+      </p>
+    </li>
+  <% end %>
+</ul>
